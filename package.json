@@ -12,7 +12,7 @@
     "download-data": "bun run scripts/download-data.ts"
   },
   "dependencies": {
-    "@quranweb/shared": "workspace:*",
+
     "hono": "^4.7.0"
   },
   "devDependencies": {
