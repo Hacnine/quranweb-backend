@@ -5,6 +5,7 @@ import { prettyJSON } from "hono/pretty-json";
 
 import surahRoutes from "./routes/surahs";
 import ayahRoutes from "./routes/ayahs";
+import searchRoutes from "./routes/search";
 
 const app = new Hono();
 
@@ -16,6 +17,7 @@ app.use("*", prettyJSON());
 // ── Routes ────────────────────────────────────────────────────────────────────
 app.route("/api/surahs", surahRoutes);
 app.route("/api/ayahs", ayahRoutes);
+app.route("/api/search", searchRoutes);
 
 app.get("/", (c) =>
   c.json({ message: "QuranWeb API", version: "1.0.0", status: "ok" })
